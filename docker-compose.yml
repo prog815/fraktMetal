@@ -1,7 +1,7 @@
 services:
   app:
-    image: python:3.9
-    working_dir: /app
+    build: ./app
+    container_name: app
     volumes:
-      - ./app:/app
+      - ./app:/usr/src/app
     entrypoint: ["python3", "convert.py"]
