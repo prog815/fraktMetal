@@ -9,7 +9,7 @@
 git clone https://github.com/prog815/fraktMetal.git
 ```
 Появится папка `fraktMetal`. Перейдите в эту папку.
-Запустите сборку образа командой (если у вас нет установленного `Docker` перейдите по ссылке и установите):
+Запустите сборку образа командой (если у вас нет установленного `Docker` перейдите по ссылке https://www.docker.com/products/docker-desktop/ и установите):
 ```
 docker-compose build
 ```
