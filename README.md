@@ -1,6 +1,8 @@
 # проект по фрактографии
 
-Модель собираем в тетрадке https://www.kaggle.com/code/eavprog/liner-keras-model-250
+Модель собирали при помощи сервиса https://liner.ai/.
+
+Модель тестировали в тетрадке https://www.kaggle.com/code/eavprog/liner-keras-model-1000-tr25-test5.
 
 # Сборка образа сервера
 
