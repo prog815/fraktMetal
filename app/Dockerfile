@@ -1,10 +1,11 @@
-FROM python:3.9
+FROM python:3.10
 
-RUN mkdir -p /usr/src/app
-WORKDIR /usr/src/app
+RUN mkdir -p /app
+WORKDIR /app
 
-ADD ./requirements.txt /usr/src/app/requirements.txt
+COPY . /app
 
+RUN pip install --no-cache-dir --upgrade pip
 RUN pip install -r requirements.txt
 
-ADD . /usr/src/app
+CMD ["python3","app.py"]

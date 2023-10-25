@@ -2,6 +2,6 @@ services:
   app:
     build: ./app
     container_name: app
-    volumes:
-      - ./app:/usr/src/app
-    entrypoint: ["python3", "convert.py"]
+    ports:
+      - 8000:8000
+    
