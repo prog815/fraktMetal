@@ -1,1 +1,2 @@
-/app/static/*.*
+/app/static/*.png
+/app/static/*.jp*g
