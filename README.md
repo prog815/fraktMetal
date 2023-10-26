@@ -2,9 +2,7 @@
 
 Приложение для конвертации изображений электронного микроскопа в размеченные.
 
-https://youtu.be/_xVUbHiFV3Y
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/_xVUbHiFV3Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+**!!! Видео с демонстрацией возможностей !!!** - https://youtu.be/_xVUbHiFV3Y
 
 Приложение содержит в себе обученную на размеченных специалистами изображениях нейросетевую модель.
 
