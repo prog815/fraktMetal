@@ -8,7 +8,6 @@
 
 Модель тестировали в тетрадке https://www.kaggle.com/code/eavprog/liner-keras-model-1000-tr25-test5.
 
-![Alt text](image.png)
 
 # Сборка образа сервера
 
@@ -32,6 +31,8 @@ docker-compose ps -a
 ```
 Должен работать контейнер `app` из образа `fraktmetal-app`.
 # Открываем программу
+
+![Alt text](image-1.png)
 
 Для доступа к интерфейсу программы откройте в браузере адрес http://localhost:8000/.
 
