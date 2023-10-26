@@ -16,11 +16,16 @@
 
         {% if request.method == 'POST' %}
             {% if file %}
-                <p>Исходное изображение:</p>
-                <img src="{{ url_for('static', filename=file) }}" width=300>
-
-                <p>Преобразованное изображение:</p>
-                <img src="{{ url_for('static', filename='pred_' + file) }}" width=300>
+                <table border="1">
+                    <tr>
+                        <th>Исходное изображение:</th>
+                        <th>Преобразованное изображение:</th>
+                    </tr>
+                    <tr>
+                        <td><img src="{{ url_for('static', filename=file) }}" width=500></td>
+                        <td><img src="{{ url_for('static', filename='pred_' + file) }}" width=500></td>
+                    </tr>
+                </table>
             {% endif %}
         {% endif %}
     </body>
