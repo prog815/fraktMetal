@@ -1,7 +1,11 @@
 from flask import Flask, render_template, request, redirect, url_for
 from PIL import Image
+import tensorflow
+import numpy as np
 
-app = Flask(__name__)
+model = tensorflow.keras.models.load_model("model_keras.h5")
+
+app = Flask(__name__, static_url_path='/static')
 
 @app.route("/", methods=['GET','POST'])
 def index():
@@ -9,9 +13,10 @@ def index():
         file = request.files['file']
         if file:
             img = Image.open(file)
+            img.save('static/' + file.filename)
             img = img.rotate(90)
-            img.save(file.filename)
-            return redirect(url_for('index'))
+            img.save('static/pred_' + file.filename)
+            return render_template("index.html",file=file.filename)
     return render_template("index.html")
 
 if __name__ == "__main__":

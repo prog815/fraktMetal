@@ -39,3 +39,8 @@ docker-compose down
 
 ```
 
+На всякий пожарный случай полная очистка неиспользуемых контейнеров:
+```
+docker system prune --all --force
+```
+

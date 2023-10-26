@@ -5,18 +5,22 @@
     </head>
     <body>
         <h1>Сервис преобразования изображения</h1>
-        <form method="POST" enctype="multipart/form-data">
+        <form method="POST" action="{{ url_for('index') }}" enctype="multipart/form-data">
             <input type="file" name="file" accept="image/*">
             <button type="submit">Преобразовать</button>
         </form>
 
+        {% if file %}
+            {{file.filename}}
+        {% endif %}
+
         {% if request.method == 'POST' %}
             {% if file %}
-                <p>Original:</p>
-                <img src="{{ url_for('static', filename=file.filename) }}" width="300">
+                <p>Исходное изображение:</p>
+                <img src="{{ url_for('static', filename=file) }}" width=300>
 
-                <p>Rotated:</p>
-                <img src="{{ url_for('static', filename=file.filename) }}" style="transform: rotate(90deg); width: 300px;">
+                <p>Преобразованное изображение:</p>
+                <img src="{{ url_for('static', filename='pred_' + file) }}" width=300>
             {% endif %}
         {% endif %}
     </body>
