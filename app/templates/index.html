@@ -16,14 +16,19 @@
 
         {% if request.method == 'POST' %}
             {% if file %}
+                <ul>
+                    <li>Содержание примесей: {{colorsdict['red']}}%</li>
+                    <li>Содержание хрупкой структуры: {{colorsdict['green']}}%</li>
+                    <li>Содержание вязкой структуры: {{colorsdict['blue']}}%</li>
+                </ul>
                 <table border="0">
                     <tr>
                         <th>Исходное изображение:</th>
                         <th>Преобразованное изображение:</th>
                     </tr>
                     <tr>
-                        <td><img src="{{ url_for('static', filename=file) }}" width=500></td>
-                        <td><img src="{{ url_for('static', filename='pred_' + file) }}" width=500></td>
+                        <td><img src="{{ url_for('static', filename=file) }}" width=256></td>
+                        <td><img src="{{ url_for('static', filename='pred_' + file) }}" width=256></td>
                     </tr>
                 </table>
             {% endif %}
